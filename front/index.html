@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/style.css">
+  <title>Pointage</title>
+</head>
+
+<body>
+  <main>
+    <h1>Application de pointage</h1>
+
+    <section id="home-page">
+      <h2>Bienvenue</h2>
+      <p>Connectez-vous pour acceder à votre espace de pointage</p>
+
+      <button id="btn-go-auth">Se connecter</button>
+      <p>Ajoutez un employé</p>
+
+      <button id="btn-go-register">Ajouter un employé</button>
+    </section>
+
+    <section id="auth-page" class="hidden">
+      <h2>Connexion employé</h2>
+
+      <input id="auth-email" type="email" placeholder="Email" />
+      <input id="auth-password" type="password" placeholder="Mot de passe" />
+
+      <button id="btn-login">Connexion</button>
+    </section>
+
+    <section id="pointage-page" class="hidden">
+      <h2>Pointage</h2>
+
+      <p id="employe-info"></p>
+
+      <button id="btn-pointage-arrivee">Valider l'arrivée</button>
+      <button id="btn-pointage-depart" class="hidden">Valider le départ</button>
+
+      <hr />
+
+      <h3>Consulter les pointages</h3>
+
+      <button id="btn-historique">Voir les pointages</button>
+
+      <hr />
+      <h3>Se déconnecter</h3>
+      <button id="btn-deconnexion">Déconnexion</button>
+    </section>
+
+    <section id="historique-page" class="hidden">
+      <h2>Historique des pointages</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Employé</th>
+            <th>Arrivée</th>
+            <th>Départ</th>
+          </tr>
+        </thead>
+        <tbody id="historique-table-body">
+          <!-- Rempli en TypeScript -->
+        </tbody>
+      </table>
+      <button id="btn-retour-pointage">Retour</button>
+    </section>
+
+    <section id="register-page" class="hidden">
+      <h2>Ajouter employé</h2>
+
+      <input id="reg-prenom" type="text" placeholder="Prénom" />
+      <input id="reg-nom" type="text" placeholder="Nom" />
+      <input id="reg-email" type="email" placeholder="Email" />
+      <input id="reg-password" type="password" placeholder="Mot de passe" />
+
+      <button id="btn-register">Ajout</button>
+    </section>
+  </main>
+  <script defer type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
